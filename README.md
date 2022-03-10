@@ -1,2 +1,2 @@
-# calcscript
-The CalcScript programming language (soon becoming popular)
+# CalcScript
+The CalcScript programming language written in Python.
