@@ -9,7 +9,7 @@ Much will be introduced in later versions of CalcScript.
 print(intromsg)
 exitypes = ["exit","exit()"]
 clstypes = ["cls", "clear", "clr"]
-cmdlist = ["help","eval", "cls", "clear", "clr","exit","exit()", "pip"] # How CalcScript's command list works
+cmdlist = ["help", "cls", "clear", "clr","exit","exit()", "pip"] # How CalcScript's command list works
 interpreter = "CALCSCRIPT>"
 def lClear():
   os.system("clear")
@@ -22,9 +22,7 @@ def wClear():
 def runCmd(command):
   command = command.lower()
   if command in cmdlist:
-    if command == "eval":
-      import eval
-    elif command == "help":
+    if command == "help":
       import mhelp
     elif command in clstypes:
       if platform.system() == "Linux" or platform.system() == "Darwin":
