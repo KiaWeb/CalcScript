@@ -7,8 +7,9 @@ CalcScript is a programming language based on Python and calculation.
 Much will be introduced in later versions of CalcScript.
 '''
 print(intromsg)
+exitypes = ["exit","exit()"]
 clstypes = ["cls", "clear", "clr"]
-cmdlist = ["help","eval", "cls", "clear", "clr"] # How CalcScript's command list works
+cmdlist = ["help","eval", "cls", "clear", "clr","exit","exit()", "pip"] # How CalcScript's command list works
 interpreter = "CALCSCRIPT>"
 def lClear():
   os.system("clear")
@@ -30,6 +31,10 @@ def runCmd(command):
         lClear()
       else:
         wClear()
+    elif command in exitypes:
+      exit()
+    elif command == "pip":
+      import pipi
 
 
 
@@ -39,7 +44,7 @@ def getc():
     runCmd(cmd)
     getc()
   else:
-    raise Exception("Not a command.")
+    print("Not a command.")
     getc()
 
 getc()
