@@ -17,7 +17,9 @@ def wClear():
 print(welcomemsg)
 interpreter = "EVAL>"
 def runCmd(command):
-    if command in exitypes:
+    if command == "pip":
+        import pipi
+    elif command in exitypes:
         import index
     elif command in clrtypes:
         if platform.system() == "Linux" or platform.system() == "Darwin":
