@@ -28,3 +28,5 @@ def getc():
   else:
     raise CommandError("Not a command.")
     getc()
+
+getc()
