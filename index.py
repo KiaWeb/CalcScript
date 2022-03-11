@@ -25,6 +25,6 @@ def getc():
   if cmd in cmdlist:
     runCmd(cmd)
     getc()
-   else:
+  else:
     raise CommandError("Not a command.")
     getc()
